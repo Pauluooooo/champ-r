@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: |
         $sha = (git rev-parse --short HEAD)
-        yarn install --silent
+        yarn install --silent --no-lockfile
         $env:SHORT_SHA=$sha; yarn build:ci
 
     - name: Move artifacts
